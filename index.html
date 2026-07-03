@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRM Institute of Science & Technology</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+    <div class="notification" id="notification">Welcome to SRMIST.</div>
+
+    <header>
+        <div class="container">
+            <div class="logo">SRM<span>IST</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#banner">Home</a></li>
+                    <li><a href="#slider">Campus</a></li>
+                    <li><a href="#placements">Placements</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#fees">Fees</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><button class="dark-toggle" id="darkToggle">Dark</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="banner-section" id="banner">
+            <div class="banner-container">
+                <img id="bannerImage" class="banner-image" src="1584704603phpyv6Sd7.jpeg" alt="SRM University entrance">
+                <div class="banner-overlay">
+                    <div class="eyebrow">Admissions Open 2026</div>
+                    <h1>Welcome to <span>SRMIST</span></h1>
+                    <p>Excellence in education, innovation, research, placements, and global impact.</p>
+                    <div class="hero-actions">
+                        <button class="banner-btn" onclick="showNotification('Explore SRMIST world-class programs and campus life.')">Explore Programs</button>
+                        <a class="ghost-btn" href="#placements">View Placements</a>
+                    </div>
+                </div>
+                <div class="image-upload-container">
+                    <label for="imageUpload">Upload Banner Image</label>
+                    <input type="file" id="imageUpload" accept="image/*">
+                </div>
+            </div>
+        </section>
+
+        <section class="slider-section" id="slider">
+            <div class="container">
+                <h2><span>Campus</span> Tour</h2>
+                <p class="section-intro">A bigger, brighter look at the places where students learn, build, present, and grow.</p>
+                <div class="slider-container">
+                    <div class="slider-wrapper" id="sliderWrapper">
+                        <div class="slider-slide"><span class="slide-title">SRM University Main Entrance</span></div>
+                        <div class="slider-slide"><span class="slide-title">Campus Road and Academic Blocks</span></div>
+                        <div class="slider-slide"><span class="slide-title">SRM Central Hospital</span></div>
+                        <div class="slider-slide"><span class="slide-title">Modern Campus Buildings</span></div>
+                    </div>
+                    <button class="slider-btn prev" id="prevBtn" aria-label="Previous slide">&lsaquo;</button>
+                    <button class="slider-btn next" id="nextBtn" aria-label="Next slide">&rsaquo;</button>
+                </div>
+                <div class="slider-dots" id="sliderDots"></div>
+            </div>
+        </section>
+
+        <section class="gallery" id="gallery">
+            <div class="container">
+                <h2><span>Gallery</span></h2>
+                <p class="section-intro">Large visual cards make each campus highlight easier to notice and nicer to browse.</p>
+                <div class="gallery-grid">
+                    <div class="gallery-card" onclick="showNotification('Tech Park: modern architecture with advanced labs.')">
+                        <div class="img-placeholder">SRM Tech Park</div>
+                        <div class="caption">Modern Tech Hub</div>
+                    </div>
+                    <div class="gallery-card" onclick="showNotification('Auditorium: hosts convocations, seminars, and cultural events.')">
+                        <div class="img-placeholder">Ganesan Auditorium</div>
+                        <div class="caption">Events and Convocation</div>
+                    </div>
+                    <div class="gallery-card" onclick="showNotification('Green Campus: open spaces and a refreshing student environment.')">
+                        <div class="img-placeholder">Green Campus View</div>
+                        <div class="caption">Eco-Friendly Campus</div>
+                    </div>
+                    <div class="gallery-card" onclick="showNotification('Biotech Block: advanced research facilities and labs.')">
+                        <div class="img-placeholder">Biotech Block</div>
+                        <div class="caption">Biotech Research</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="placements" id="placements">
+            <div class="container">
+                <h2><span>Placements</span> and Recruiters</h2>
+                <p class="placement-info">Strong industry connections, active placement support, and recruiters across technology, consulting, finance, and business roles.</p>
+
+                <div class="placement-stats">
+                    <div class="stat-box" onclick="showNotification('Highest package: 55 LPA.')">
+                        <div class="number" id="highestStat">0</div>
+                        <div class="label">Highest Package (LPA)</div>
+                    </div>
+                    <div class="stat-box" onclick="showNotification('Average package: 9.59 LPA.')">
+                        <div class="number" id="avgStat">0</div>
+                        <div class="label">Average Package (LPA)</div>
+                    </div>
+                    <div class="stat-box" onclick="showNotification('More than 1,200 recruiting partners.')">
+                        <div class="number" id="companiesStat">0</div>
+                        <div class="label">Recruiting Companies</div>
+                    </div>
+                </div>
+
+                <div class="recruiters">
+                    <span class="tag" onclick="showNotification('Cognizant - IT and technology roles.')">Cognizant</span>
+                    <span class="tag" onclick="showNotification('Amazon - software and operations roles.')">Amazon</span>
+                    <span class="tag" onclick="showNotification('Uber - technology and business roles.')">Uber</span>
+                    <span class="tag" onclick="showNotification('EY - consulting and finance opportunities.')">EY</span>
+                    <span class="tag" onclick="showNotification('ICICI Securities - banking and finance roles.')">ICICI Securities</span>
+                    <span class="tag" onclick="showNotification('Airtel - telecom and digital roles.')">Airtel</span>
+                    <span class="tag" onclick="showNotification('Infosys - global IT services.')">Infosys</span>
+                    <span class="tag" onclick="showNotification('TCS - IT services and consulting.')">TCS</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="courses" id="courses">
+            <div class="container">
+                <h2><span>Courses</span> Offered</h2>
+                <p class="section-intro">Clean course cards with more room, better spacing, and clearer text.</p>
+                <div class="course-grid">
+                    <div class="course-card" onclick="showNotification('B.Tech includes multiple engineering specializations.')">
+                        <h3>B.Tech</h3>
+                        <ul>
+                            <li>CSE and CSE with AIML</li>
+                            <li>Data Science and Cyber Security</li>
+                            <li>Electronics and Communication</li>
+                            <li>Mechanical and Automobile</li>
+                        </ul>
+                    </div>
+                    <div class="course-card" onclick="showNotification('Management programs build business and leadership skills.')">
+                        <h3>Management</h3>
+                        <ul>
+                            <li>BBA and MBA</li>
+                            <li>Finance and marketing</li>
+                            <li>Business analytics</li>
+                            <li>Entrepreneurship</li>
+                        </ul>
+                    </div>
+                    <div class="course-card" onclick="showNotification('Science programs focus on research and laboratory learning.')">
+                        <h3>Science</h3>
+                        <ul>
+                            <li>Biotechnology</li>
+                            <li>Physics and Chemistry</li>
+                            <li>Computer Science</li>
+                            <li>Research-focused learning</li>
+                        </ul>
+                    </div>
+                    <div class="course-card" onclick="showNotification('Humanities programs support design, media, and communication paths.')">
+                        <h3>Humanities</h3>
+                        <ul>
+                            <li>Journalism and media</li>
+                            <li>Psychology</li>
+                            <li>English and communication</li>
+                            <li>Liberal arts</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="fees" id="fees">
+            <div class="container">
+                <h2><span>Fee</span> Calculator</h2>
+                <p class="section-intro">Estimate the annual tuition quickly by choosing a program and duration.</p>
+                <div class="fee-layout">
+                    <div class="fee-calculator">
+                        <h3>Calculate Fees</h3>
+                        <label for="programSelect">Program</label>
+                        <select id="programSelect">
+                            <option value="350000">B.Tech</option>
+                            <option value="250000">MBA</option>
+                            <option value="150000">B.Sc</option>
+                            <option value="120000">B.A</option>
+                        </select>
+
+                        <label for="yearsInput">Number of Years</label>
+                        <input type="number" id="yearsInput" min="1" max="5" value="4">
+
+                        <button class="calc-btn" id="calcBtn">Calculate Total Fee</button>
+                        <div class="fee-result" id="feeResult"></div>
+                    </div>
+
+                    <div>
+                        <div class="fee-table">
+                            <div class="fee-row head">
+                                <div class="program">Program</div>
+                                <div class="amount">Annual Fee</div>
+                            </div>
+                            <div class="fee-row">
+                                <div class="program">B.Tech</div>
+                                <div class="amount">Rs. 3,50,000</div>
+                            </div>
+                            <div class="fee-row">
+                                <div class="program">MBA</div>
+                                <div class="amount">Rs. 2,50,000</div>
+                            </div>
+                            <div class="fee-row">
+                                <div class="program">B.Sc</div>
+                                <div class="amount">Rs. 1,50,000</div>
+                            </div>
+                            <div class="fee-row">
+                                <div class="program">B.A</div>
+                                <div class="amount">Rs. 1,20,000</div>
+                            </div>
+                        </div>
+                        <p class="fee-note">Fees shown are sample values for this webpage design.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="contact" id="contact">
+        <div class="container">
+            <div>
+                <h4>SRM Institute of Science & Technology</h4>
+                <p>A modern student-focused university page with larger visuals and clearer sections.</p>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <p>Kattankulathur, Tamil Nadu</p>
+                <p>admissions@srmist.edu.in</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <a href="#courses">Courses</a>
+                <a href="#fees">Fees</a>
+                <a href="#placements">Placements</a>
+            </div>
+            <div>
+                <h4>Explore</h4>
+                <a href="#slider">Campus Tour</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#banner">Admissions</a>
+            </div>
+        </div>
+        <div class="footer-bottom">Copyright 2026 SRMIST. Demo webpage.</div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">^</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
